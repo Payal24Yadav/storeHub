@@ -180,8 +180,8 @@ export default function Home() {
             <ImageWithFallback 
               src="/banner1.png" 
               alt="Everyday Fresh & Clean" 
-              containerClassName="relative md:absolute mx-auto md:mx-0 mt-8 md:mt-0 right-0 bottom-0 w-[50%] md:w-[45%] h-[120px] md:h-[85%] bg-transparent pointer-events-none"
-              className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 drop-shadow-2xl"
+              containerClassName="relative md:absolute mt-8 md:mt-0 right-0 bottom-0 w-[50%] md:w-[45%] h-[120px] md:h-[85%] bg-transparent pointer-events-none"
+              className="w-full h-full object-contain object-left md:object-center transition-transform duration-500 group-hover:scale-105 drop-shadow-2xl"
             />
           </div>
 
@@ -202,8 +202,8 @@ export default function Home() {
             <ImageWithFallback 
               src="/banner2.png" 
               alt="Breakfast Healthy and Easy" 
-              containerClassName="relative md:absolute mx-auto md:mx-0 mt-8 md:mt-0 right-0 bottom-0 w-[50%] md:w-[45%] h-[120px] md:h-[85%] bg-transparent pointer-events-none"
-              className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 drop-shadow-2xl"
+              containerClassName="relative md:absolute mt-8 md:mt-0 right-0 bottom-0 w-[50%] md:w-[45%] h-[120px] md:h-[85%] bg-transparent pointer-events-none"
+              className="w-full h-full object-contain object-left md:object-center transition-transform duration-500 group-hover:scale-105 drop-shadow-2xl"
             />
           </div>
 
@@ -224,8 +224,8 @@ export default function Home() {
             <ImageWithFallback 
               src="/banner3.png" 
               alt="Organic Products Online" 
-              containerClassName="relative md:absolute mx-auto md:mx-0 mt-8 md:mt-0 right-0 bottom-0 w-[50%] md:w-[45%] h-[120px] md:h-[85%] bg-transparent pointer-events-none"
-              className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 drop-shadow-2xl"
+              containerClassName="relative md:absolute mt-8 md:mt-0 right-0 bottom-0 w-[50%] md:w-[45%] h-[120px] md:h-[85%] bg-transparent pointer-events-none"
+              className="w-full h-full object-contain object-left md:object-center transition-transform duration-500 group-hover:scale-105 drop-shadow-2xl"
             />
           </div>
 

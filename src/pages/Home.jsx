@@ -83,13 +83,13 @@ export default function Home() {
       {/* ─── FEATURED CATEGORIES SECTION ─── */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 space-y-4">
         {/* Header container */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-          <div className="space-y-2.5 w-full">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
+          <div className="space-y-2.5 w-full md:w-auto flex-1">
             <h2 className="text-2xl md:text-3xl font-extrabold text-[#0B1F5C] tracking-tight">
               Featured Categories
             </h2>
             {/* Mobile Category Links (wraps cleanly on mobile) */}
-            <div className="flex flex-wrap items-center gap-x-1.5 gap-y-1.5 text-[10px] min-[375px]:text-xs font-bold text-gray-500 sm:hidden w-full">
+            <div className="flex flex-wrap items-center gap-x-1.5 gap-y-1.5 text-[10px] min-[375px]:text-xs font-bold text-gray-500 md:hidden w-full">
               <Link to="/category/snacks" className="hover:text-[#3BB77E] transition-colors whitespace-nowrap bg-gray-50 hover:bg-[#3BB77E]/10 px-2 py-1 min-[375px]:px-2.5 rounded-full border border-gray-200/50">Cake & Milk</Link>
               <Link to="/category/stationery" className="hover:text-[#3BB77E] transition-colors whitespace-nowrap bg-gray-50 hover:bg-[#3BB77E]/10 px-2 py-1 min-[375px]:px-2.5 rounded-full border border-gray-200/50">Coffes & Teas</Link>
               <Link to="/category/home-essentials" className="hover:text-[#3BB77E] transition-colors whitespace-nowrap bg-gray-50 hover:bg-[#3BB77E]/10 px-2 py-1 min-[375px]:px-2.5 rounded-full border border-gray-200/50">Pet Foods</Link>
@@ -97,17 +97,17 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="flex items-center justify-between sm:justify-end gap-4 w-full sm:w-auto">
+          <div className="flex items-center justify-between md:justify-end gap-4 w-full md:w-auto shrink-0">
             {/* Desktop Category Links (hidden on mobile) */}
-            <div className="hidden sm:flex items-center gap-4 text-sm font-bold text-gray-500">
-              <Link to="/category/snacks" className="hover:text-[#3BB77E] transition-colors">Cake & Milk</Link>
-              <Link to="/category/stationery" className="hover:text-[#3BB77E] transition-colors">Coffes & Teas</Link>
-              <Link to="/category/home-essentials" className="hover:text-[#3BB77E] transition-colors">Pet Foods</Link>
-              <Link to="/category/home-care" className="hover:text-[#3BB77E] transition-colors">Vegetables</Link>
+            <div className="hidden md:flex items-center gap-4 text-sm font-bold text-gray-500">
+              <Link to="/category/snacks" className="hover:text-[#3BB77E] transition-colors whitespace-nowrap">Cake & Milk</Link>
+              <Link to="/category/stationery" className="hover:text-[#3BB77E] transition-colors whitespace-nowrap">Coffes & Teas</Link>
+              <Link to="/category/home-essentials" className="hover:text-[#3BB77E] transition-colors whitespace-nowrap">Pet Foods</Link>
+              <Link to="/category/home-care" className="hover:text-[#3BB77E] transition-colors whitespace-nowrap">Vegetables</Link>
             </div>
             
             {/* Scroll Navigation */}
-            <div className="flex items-center gap-2 ml-auto sm:ml-0">
+            <div className="flex items-center gap-2 ml-auto md:ml-0">
               <button 
                 onClick={() => scroll('left')}
                 className="w-8 h-8 rounded-full border border-gray-200 bg-white flex items-center justify-center text-gray-500 hover:bg-[#3BB77E] hover:text-white hover:border-transparent transition-all shadow-sm active:scale-90"

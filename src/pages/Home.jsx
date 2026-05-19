@@ -87,12 +87,12 @@ export default function Home() {
             <h2 className="text-2xl md:text-3xl font-extrabold text-[#0B1F5C] tracking-tight">
               Featured Categories
             </h2>
-          </div>`n          <div className="flex items-center gap-2 shrink-0">
-              <Link to="/category/snacks" className="hover:text-[#3BB77E] transition-colors">Cake & Milk</Link>
-              <Link to="/category/stationery" className="hover:text-[#3BB77E] transition-colors">Coffes & Teas</Link>
-              <Link to="/category/home-essentials" className="hover:text-[#3BB77E] transition-colors">Pet Foods</Link>
-              <Link to="/category/home-care" className="hover:text-[#3BB77E] transition-colors">Vegetables</Link>
-            </div>
+          </div>
+          <div className="flex items-center gap-2 shrink-0">
+            <Link to="/category/snacks" className="hover:text-[#3BB77E] transition-colors">Cake & Milk</Link>
+            <Link to="/category/stationery" className="hover:text-[#3BB77E] transition-colors">Coffes & Teas</Link>
+            <Link to="/category/home-essentials" className="hover:text-[#3BB77E] transition-colors">Pet Foods</Link>
+            <Link to="/category/home-care" className="hover:text-[#3BB77E] transition-colors">Vegetables</Link>
           </div>
           
           {/* Scroll Navigation */}

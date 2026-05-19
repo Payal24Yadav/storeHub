@@ -30,15 +30,15 @@ const faqs = [
 
 const featuredCategories = [
   { name: 'Cake & Milk', items: '11 items', bg: 'bg-[#F2F9E9]', image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=150&q=80', slug: 'snacks' },
-  { name: 'Oganic Kiwi', items: '6 items', bg: 'bg-[#FEEFEA]', image: 'https://images.unsplash.com/photo-1550828520-4cb496926fc9?w=300&auto=format&fit=crop&q=80', slug: 'home-essentials' },
+  { name: 'Organic Kiwi', items: '6 items', bg: 'bg-[#FEEFEA]', image: 'https://images.unsplash.com/photo-1550828520-4cb496926fc9?w=300&auto=format&fit=crop&q=80', slug: 'home-essentials' },
   { name: 'Peach', items: '6 items', bg: 'bg-[#ECFFEC]', image: 'https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?w=300&auto=format&fit=crop&q=80', slug: 'home-care' },
-  { name: 'Read Apple', items: '10 items', bg: 'bg-[#FEEFEA]', image: 'https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=150&q=80', slug: 'snacks' },
+  { name: 'Red Apple', items: '10 items', bg: 'bg-[#FEEFEA]', image: 'https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=150&q=80', slug: 'snacks' },
   { name: 'Snacks', items: '11 items', bg: 'bg-[#FFF3EB]', image: 'https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=300&auto=format&fit=crop&q=80', slug: 'snacks' },
   { name: 'Vegetables', items: '6 items', bg: 'bg-[#FFF3FF]', image: 'https://images.unsplash.com/photo-1574316071802-0d684efa7bf5?w=150&q=80', slug: 'home-care' },
   { name: 'Strawberry', items: '10 items', bg: 'bg-[#F2F9E9]', image: 'https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=150&q=80', slug: 'snacks' },
   { name: 'Black plum', items: '10 items', bg: 'bg-[#FEEFEA]', image: 'https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?w=150&q=80', slug: 'snacks' },
   { name: 'Custard apple', items: '10 items', bg: 'bg-[#ECFFEC]', image: 'https://images.unsplash.com/photo-1528825871115-3581a5387919?w=150&q=80', slug: 'home-care' },
-  { name: 'Coffe & Tea', items: '11 items', bg: 'bg-[#FFF3EB]', image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=150&q=80', slug: 'stationery' },
+  { name: 'Coffee & Tea', items: '11 items', bg: 'bg-[#FFF3EB]', image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=150&q=80', slug: 'stationery' },
 ];
 
 export default function Home() {
@@ -81,34 +81,46 @@ export default function Home() {
       <HeroSection />
 
       {/* ─── FEATURED CATEGORIES SECTION ─── */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 space-y-3">
-        <div className="flex items-center justify-between gap-2">
-          <div>
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 space-y-4">
+        {/* Header container */}
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+          <div className="space-y-2.5 w-full">
             <h2 className="text-2xl md:text-3xl font-extrabold text-[#0B1F5C] tracking-tight">
               Featured Categories
             </h2>
-          </div>
-          <div className="flex items-center gap-2 shrink-0">
-            <Link to="/category/snacks" className="hover:text-[#3BB77E] transition-colors">Cake & Milk</Link>
-            <Link to="/category/stationery" className="hover:text-[#3BB77E] transition-colors">Coffes & Teas</Link>
-            <Link to="/category/home-essentials" className="hover:text-[#3BB77E] transition-colors">Pet Foods</Link>
-            <Link to="/category/home-care" className="hover:text-[#3BB77E] transition-colors">Vegetables</Link>
+            {/* Mobile Category Links (wraps cleanly on mobile) */}
+            <div className="flex flex-wrap items-center gap-x-1.5 gap-y-1.5 text-[10px] min-[375px]:text-xs font-bold text-gray-500 sm:hidden w-full">
+              <Link to="/category/snacks" className="hover:text-[#3BB77E] transition-colors whitespace-nowrap bg-gray-50 hover:bg-[#3BB77E]/10 px-2 py-1 min-[375px]:px-2.5 rounded-full border border-gray-200/50">Cake & Milk</Link>
+              <Link to="/category/stationery" className="hover:text-[#3BB77E] transition-colors whitespace-nowrap bg-gray-50 hover:bg-[#3BB77E]/10 px-2 py-1 min-[375px]:px-2.5 rounded-full border border-gray-200/50">Coffes & Teas</Link>
+              <Link to="/category/home-essentials" className="hover:text-[#3BB77E] transition-colors whitespace-nowrap bg-gray-50 hover:bg-[#3BB77E]/10 px-2 py-1 min-[375px]:px-2.5 rounded-full border border-gray-200/50">Pet Foods</Link>
+              <Link to="/category/home-care" className="hover:text-[#3BB77E] transition-colors whitespace-nowrap bg-gray-50 hover:bg-[#3BB77E]/10 px-2 py-1 min-[375px]:px-2.5 rounded-full border border-gray-200/50">Vegetables</Link>
+            </div>
           </div>
           
-          {/* Scroll Navigation */}
-          <div className="flex items-center gap-2 self-end md:self-auto">
-            <button 
-              onClick={() => scroll('left')}
-              className="w-8 h-8 rounded-full border border-gray-200 bg-white flex items-center justify-center text-gray-500 hover:bg-[#3BB77E] hover:text-white hover:border-transparent transition-all shadow-sm active:scale-90"
-            >
-              <FiChevronLeft className="w-4 h-4" />
-            </button>
-            <button 
-              onClick={() => scroll('right')}
-              className="w-8 h-8 rounded-full border border-gray-200 bg-white flex items-center justify-center text-gray-500 hover:bg-[#3BB77E] hover:text-white hover:border-transparent transition-all shadow-sm active:scale-90"
-            >
-              <FiChevronRight className="w-4 h-4" />
-            </button>
+          <div className="flex items-center justify-between sm:justify-end gap-4 w-full sm:w-auto">
+            {/* Desktop Category Links (hidden on mobile) */}
+            <div className="hidden sm:flex items-center gap-4 text-sm font-bold text-gray-500">
+              <Link to="/category/snacks" className="hover:text-[#3BB77E] transition-colors">Cake & Milk</Link>
+              <Link to="/category/stationery" className="hover:text-[#3BB77E] transition-colors">Coffes & Teas</Link>
+              <Link to="/category/home-essentials" className="hover:text-[#3BB77E] transition-colors">Pet Foods</Link>
+              <Link to="/category/home-care" className="hover:text-[#3BB77E] transition-colors">Vegetables</Link>
+            </div>
+            
+            {/* Scroll Navigation */}
+            <div className="flex items-center gap-2 ml-auto sm:ml-0">
+              <button 
+                onClick={() => scroll('left')}
+                className="w-8 h-8 rounded-full border border-gray-200 bg-white flex items-center justify-center text-gray-500 hover:bg-[#3BB77E] hover:text-white hover:border-transparent transition-all shadow-sm active:scale-90"
+              >
+                <FiChevronLeft className="w-4 h-4" />
+              </button>
+              <button 
+                onClick={() => scroll('right')}
+                className="w-8 h-8 rounded-full border border-gray-200 bg-white flex items-center justify-center text-gray-500 hover:bg-[#3BB77E] hover:text-white hover:border-transparent transition-all shadow-sm active:scale-90"
+              >
+                <FiChevronRight className="w-4 h-4" />
+              </button>
+            </div>
           </div>
         </div>
 
@@ -122,9 +134,9 @@ export default function Home() {
             <Link
               key={i}
               to={`/category/${cat.slug}`}
-              className={`snap-start shrink-0 w-[150px] h-[190px] ${cat.bg} rounded-[2rem] relative overflow-hidden flex flex-col items-center justify-center group shadow-sm hover:shadow-2xl hover:shadow-[#0B1F5C]/10 transition-all duration-500 border border-transparent hover:border-white/50 hover:-translate-y-2`}
+              className={`snap-start shrink-0 w-[110px] sm:w-[130px] md:w-[150px] h-[155px] sm:h-[180px] md:h-[195px] ${cat.bg} rounded-[1.5rem] sm:rounded-[2rem] relative overflow-hidden flex flex-col items-center justify-between p-3.5 sm:p-5 group shadow-sm hover:shadow-2xl hover:shadow-[#0B1F5C]/10 transition-all duration-500 border border-transparent hover:border-white/50 hover:-translate-y-2`}
             >
-              <div className="w-24 h-24 mb-6 relative z-10 transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-1">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 relative z-10 transition-transform duration-500 group-hover:scale-110 flex-shrink-0 flex items-center justify-center">
                 <ImageWithFallback 
                   src={cat.image} 
                   alt={cat.name} 
@@ -132,11 +144,11 @@ export default function Home() {
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                 />
               </div>
-              <div className="absolute bottom-5 left-0 right-0 text-center z-20">
-                <h3 className="font-black text-xs text-[#0B1F5C] leading-tight group-hover:text-[#FF7A00] transition-colors duration-300 px-2">
+              <div className="text-center z-20 w-full mt-auto">
+                <h3 className="font-black text-[10px] sm:text-xs text-[#0B1F5C] leading-tight group-hover:text-[#FF7A00] transition-colors duration-300 px-0.5 line-clamp-2">
                   {cat.name}
                 </h3>
-                <span className="text-[9px] font-extrabold text-[#0B1F5C]/50 uppercase tracking-widest block mt-1.5 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                <span className="text-[8px] sm:text-[9px] font-extrabold text-[#0B1F5C]/50 uppercase tracking-widest block mt-1 opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all duration-300">
                   {cat.items}
                 </span>
               </div>
@@ -152,8 +164,8 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           
           {/* Banner 1 - Onion */}
-          <div className="relative overflow-hidden rounded-3xl bg-[#F2EBD9] p-8 md:p-10 flex flex-col justify-between min-h-[220px] md:min-h-[250px] shadow-sm hover:shadow-xl hover:shadow-gray-200/50 hover:-translate-y-1.5 transition-all duration-300 group">
-            <div className="max-w-[60%] space-y-4 z-10">
+          <div className="relative overflow-hidden rounded-3xl bg-[#F2EBD9] p-6 md:p-10 flex flex-col md:justify-between min-h-none md:min-h-[250px] shadow-sm hover:shadow-xl hover:shadow-gray-200/50 hover:-translate-y-1.5 transition-all duration-300 group">
+            <div className="w-full md:max-w-[60%] space-y-3 md:space-y-4 z-10">
               <h3 className="text-lg md:text-xl font-bold text-[#0B1F5C] leading-snug font-display">
                 Everyday Fresh & Clean with Our Products
               </h3>
@@ -168,14 +180,14 @@ export default function Home() {
             <ImageWithFallback 
               src="/banner1.png" 
               alt="Everyday Fresh & Clean" 
-              containerClassName="absolute right-0 bottom-0 w-[50%] md:w-[45%] h-[85%] bg-transparent pointer-events-none"
+              containerClassName="relative md:absolute mx-auto md:mx-0 mt-8 md:mt-0 right-0 bottom-0 w-[50%] md:w-[45%] h-[120px] md:h-[85%] bg-transparent pointer-events-none"
               className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 drop-shadow-2xl"
             />
           </div>
 
           {/* Banner 2 - Strawberry Juice */}
-          <div className="relative overflow-hidden rounded-3xl bg-[#F5E6E8] p-8 md:p-10 flex flex-col justify-between min-h-[220px] md:min-h-[250px] shadow-sm hover:shadow-xl hover:shadow-gray-200/50 hover:-translate-y-1.5 transition-all duration-300 group">
-            <div className="max-w-[60%] space-y-4 z-10">
+          <div className="relative overflow-hidden rounded-3xl bg-[#F5E6E8] p-6 md:p-10 flex flex-col md:justify-between min-h-none md:min-h-[250px] shadow-sm hover:shadow-xl hover:shadow-gray-200/50 hover:-translate-y-1.5 transition-all duration-300 group">
+            <div className="w-full md:max-w-[60%] space-y-3 md:space-y-4 z-10">
               <h3 className="text-lg md:text-xl font-bold text-[#0B1F5C] leading-snug font-display">
                 Make your Breakfast Healthy and Easy
               </h3>
@@ -190,14 +202,14 @@ export default function Home() {
             <ImageWithFallback 
               src="/banner2.png" 
               alt="Breakfast Healthy and Easy" 
-              containerClassName="absolute right-0 bottom-0 w-[50%] md:w-[45%] h-[85%] bg-transparent pointer-events-none"
+              containerClassName="relative md:absolute mx-auto md:mx-0 mt-8 md:mt-0 right-0 bottom-0 w-[50%] md:w-[45%] h-[120px] md:h-[85%] bg-transparent pointer-events-none"
               className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 drop-shadow-2xl"
             />
           </div>
 
           {/* Banner 3 - Organic Veggies */}
-          <div className="relative overflow-hidden rounded-3xl bg-[#E7ECF3] p-8 md:p-10 flex flex-col justify-between min-h-[220px] md:min-h-[250px] shadow-sm hover:shadow-xl hover:shadow-gray-200/50 hover:-translate-y-1.5 transition-all duration-300 group">
-            <div className="max-w-[60%] space-y-4 z-10">
+          <div className="relative overflow-hidden rounded-3xl bg-[#E7ECF3] p-6 md:p-10 flex flex-col md:justify-between min-h-none md:min-h-[250px] shadow-sm hover:shadow-xl hover:shadow-gray-200/50 hover:-translate-y-1.5 transition-all duration-300 group">
+            <div className="w-full md:max-w-[60%] space-y-3 md:space-y-4 z-10">
               <h3 className="text-lg md:text-xl font-bold text-[#0B1F5C] leading-snug font-display">
                 The best Organic Products Online
               </h3>
@@ -212,7 +224,7 @@ export default function Home() {
             <ImageWithFallback 
               src="/banner3.png" 
               alt="Organic Products Online" 
-              containerClassName="absolute right-0 bottom-0 w-[50%] md:w-[45%] h-[85%] bg-transparent pointer-events-none"
+              containerClassName="relative md:absolute mx-auto md:mx-0 mt-8 md:mt-0 right-0 bottom-0 w-[50%] md:w-[45%] h-[120px] md:h-[85%] bg-transparent pointer-events-none"
               className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105 drop-shadow-2xl"
             />
           </div>

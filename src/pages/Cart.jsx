@@ -121,21 +121,21 @@ export default function Cart() {
           <div className="lg:col-span-4 space-y-6">
             
             {/* Promo voucher coupon panel */}
-            <div className="p-6 rounded-3xl bg-white border border-gray-100 shadow-sm space-y-4">
+            <div className="p-4 sm:p-6 rounded-3xl bg-white border border-gray-100 shadow-sm space-y-4">
               <h3 className="text-xs font-black text-gray-400 uppercase tracking-widest flex items-center gap-1.5">
                 <FiTag className="w-4 h-4 text-[#FF7A00]" />
                 Promo Coupon Code
               </h3>
-              <form onSubmit={handleApplyCoupon} className="flex gap-2">
+              <form onSubmit={handleApplyCoupon} className="flex gap-2 w-full items-center">
                 <input
                   value={couponCode}
                   onChange={(e) => setCouponCode(e.target.value)}
-                  placeholder="Enter code (STORE99)"
-                  className="flex-grow px-4 py-3 rounded-2xl bg-gray-50 border border-transparent focus:border-[#FF7A00]/25 outline-none text-xs font-semibold text-[#0B1F5C]"
+                  placeholder="Code (STORE99)"
+                  className="flex-grow min-w-0 px-3 py-2.5 sm:px-4 sm:py-3 rounded-2xl bg-gray-50 border border-transparent focus:border-[#FF7A00]/25 outline-none text-xs font-semibold text-[#0B1F5C]"
                 />
                 <button
                   type="submit"
-                  className="px-5 py-3 rounded-2xl bg-[#0B1F5C] hover:bg-[#FF7A00] text-white font-bold text-xs transition-colors"
+                  className="px-4 py-2.5 sm:px-5 sm:py-3 rounded-2xl bg-[#0B1F5C] hover:bg-[#FF7A00] text-white font-bold text-xs transition-colors whitespace-nowrap text-center flex-shrink-0"
                 >
                   Apply
                 </button>

@@ -83,7 +83,7 @@ export default function HeroSection() {
             <img
               src={slides[currentSlide].image}
               alt={slides[currentSlide].alt}
-              className="w-full h-full object-cover select-none pointer-events-none"
+              className="w-full h-full object-cover object-left sm:object-center select-none pointer-events-none"
             />
             {/* Subtle soft dark overlay for premium depth */}
             <div className="absolute inset-0 bg-black/10 pointer-events-none" />

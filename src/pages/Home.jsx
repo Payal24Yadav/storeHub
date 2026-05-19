@@ -81,13 +81,13 @@ export default function Home() {
       <HeroSection />
 
       {/* ─── FEATURED CATEGORIES SECTION ─── */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 space-y-6">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-          <div className="flex flex-wrap items-end gap-6 md:gap-10">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 space-y-3">
+        <div className="flex items-center justify-between gap-2">
+          <div>
             <h2 className="text-2xl md:text-3xl font-extrabold text-[#0B1F5C] tracking-tight">
               Featured Categories
             </h2>
-            <div className="flex flex-wrap gap-4 text-xs font-semibold text-gray-500 pb-1">
+          </div>`n          <div className="flex items-center gap-2 shrink-0">
               <Link to="/category/snacks" className="hover:text-[#3BB77E] transition-colors">Cake & Milk</Link>
               <Link to="/category/stationery" className="hover:text-[#3BB77E] transition-colors">Coffes & Teas</Link>
               <Link to="/category/home-essentials" className="hover:text-[#3BB77E] transition-colors">Pet Foods</Link>

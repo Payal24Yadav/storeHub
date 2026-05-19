@@ -36,16 +36,16 @@ export default function Footer() {
               <h3 className="text-2xl font-black mb-1">Stay in the Loop! 🎉</h3>
               <p className="text-blue-200 text-sm">Get exclusive offers, new arrivals and deals delivered to your inbox.</p>
             </div>
-            <form className="flex w-full max-w-md gap-2" onSubmit={(e) => e.preventDefault()}>
+            <form className="flex flex-col sm:flex-row w-full max-w-md gap-2.5" onSubmit={(e) => e.preventDefault()}>
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-blue-200 outline-none focus:border-[#FF7A00] transition-colors text-sm"
+                className="w-full sm:flex-1 px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-blue-200 outline-none focus:border-[#FF7A00] transition-colors text-sm"
               />
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 bg-gradient-to-r from-[#FF7A00] to-[#FFC107] rounded-xl font-bold text-sm whitespace-nowrap shadow-lg shadow-orange-500/30"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="w-full sm:w-auto px-6 py-3 bg-gradient-to-r from-[#FF7A00] to-[#FFC107] rounded-xl font-bold text-sm whitespace-nowrap shadow-lg shadow-orange-500/30"
               >
                 Subscribe
               </motion.button>

@@ -224,55 +224,55 @@ export default function Home() {
       
 
       {/* ─── DAILY FLASH DEALS SECTION ─── */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 p-8 md:p-12 rounded-3xl bg-gradient-to-r from-[#0B1F5C] to-blue-950 text-white relative overflow-hidden shadow-2xl">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 p-4 sm:p-8 md:p-12 rounded-2xl sm:rounded-3xl bg-gradient-to-r from-[#0B1F5C] to-blue-950 text-white relative overflow-hidden shadow-2xl">
         <div className="absolute inset-0 bg-radial-gradient(at 0% 0%, rgba(255,122,0,0.15), transparent 60%) pointer-events-none" />
         
-        <div className="relative z-10 flex flex-col lg:flex-row justify-between items-center gap-8 mb-8 pb-6 border-b border-white/10">
+        <div className="relative z-10 flex flex-col lg:flex-row justify-between items-center gap-4 sm:gap-8 mb-4 sm:mb-8 pb-4 sm:pb-6 border-b border-white/10">
           
-          <div className="space-y-2 text-center lg:text-left">
+          <div className="space-y-1 text-center lg:text-left">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-orange-500/20 text-[#FF7A00] text-xs font-black uppercase tracking-wider border border-orange-500/30">
               <FiZap className="w-3.5 h-3.5 fill-current" />
               Flash Deal of the Day
             </div>
-            <h2 className="text-3xl font-black">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-black">
               Limited-Time Super Offers!
             </h2>
           </div>
 
           {/* Countdown Clock Container */}
-          <div className="flex items-center gap-2 select-none">
-            <span className="text-xs font-bold text-gray-300 mr-2 uppercase tracking-wider">ENDING IN:</span>
+          <div className="flex items-center gap-1.5 sm:gap-2 select-none">
+            <span className="text-[10px] sm:text-xs font-bold text-gray-300 mr-1 sm:mr-2 uppercase tracking-wider">ENDING IN:</span>
             {/* Hours */}
             <div className="flex flex-col items-center">
-              <div className="w-12 py-2 rounded-xl bg-white/10 font-black text-lg text-center border border-white/10 shadow-inner">
+              <div className="w-9 sm:w-12 py-1.5 sm:py-2 rounded-lg sm:rounded-xl bg-white/10 font-black text-sm sm:text-lg text-center border border-white/10 shadow-inner">
                 {String(timeLeft.hours).padStart(2, '0')}
               </div>
-              <span className="text-[9px] text-gray-400 font-extrabold mt-1">HRS</span>
+              <span className="text-[8px] sm:text-[9px] text-gray-400 font-extrabold mt-1">HRS</span>
             </div>
             <span className="font-black text-[#FF7A00] animate-pulse">:</span>
             {/* Minutes */}
             <div className="flex flex-col items-center">
-              <div className="w-12 py-2 rounded-xl bg-white/10 font-black text-lg text-center border border-white/10 shadow-inner">
+              <div className="w-9 sm:w-12 py-1.5 sm:py-2 rounded-lg sm:rounded-xl bg-white/10 font-black text-sm sm:text-lg text-center border border-white/10 shadow-inner">
                 {String(timeLeft.minutes).padStart(2, '0')}
               </div>
-              <span className="text-[9px] text-gray-400 font-extrabold mt-1">MINS</span>
+              <span className="text-[8px] sm:text-[9px] text-gray-400 font-extrabold mt-1">MINS</span>
             </div>
             <span className="font-black text-[#FF7A00] animate-pulse">:</span>
             {/* Seconds */}
             <div className="flex flex-col items-center">
-              <div className="w-12 py-2 rounded-xl bg-white/10 font-black text-lg text-center border border-white/10 shadow-inner">
+              <div className="w-9 sm:w-12 py-1.5 sm:py-2 rounded-lg sm:rounded-xl bg-white/10 font-black text-sm sm:text-lg text-center border border-white/10 shadow-inner">
                 {String(timeLeft.seconds).padStart(2, '0')}
               </div>
-              <span className="text-[9px] text-gray-400 font-extrabold mt-1">SECS</span>
+              <span className="text-[8px] sm:text-[9px] text-gray-400 font-extrabold mt-1">SECS</span>
             </div>
           </div>
 
         </div>
 
         {/* Deals products list grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
           {featuredProducts.map((p) => (
-            <div key={p.id} className="bg-white rounded-3xl p-1 text-[#0B1F5C]">
+            <div key={p.id} className="bg-white rounded-2xl sm:rounded-3xl p-0.5 sm:p-1 text-[#0B1F5C]">
               <ProductCard product={p} />
             </div>
           ))}
@@ -284,7 +284,7 @@ export default function Home() {
         <div className="flex items-center justify-between">
           <div className="space-y-1">
             <span className="text-xs uppercase font-black text-[#FF7A00] tracking-widest">Selected Quality</span>
-            <h2 className="text-3xl font-black text-[#0B1F5C]">Trending E-commerce Goods</h2>
+            <h2 className="text-2xl sm:text-3xl font-black text-[#0B1F5C]">Trending E-commerce Goods</h2>
           </div>
           <Link to="/shop" className="flex items-center gap-1 font-extrabold text-sm text-[#FF7A00] hover:text-[#0B1F5C] transition-colors group">
             See All Items
@@ -292,7 +292,7 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
           {trendingProducts.map((p) => (
             <ProductCard key={p.id} product={p} />
           ))}
